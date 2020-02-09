@@ -10,5 +10,13 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    const img = document.querySelector("img");
+    const attribute = img.getAttribute("data-hover");
+    const currentsrc = img.getAttribute("src");
+    img.addEventListener("mouseenter", () => {
+        img.setAttribute("src", attribute);
+    });
+    img.addEventListener("mouseleave", () => {
+        img.setAttribute("src", currentsrc);
+    });
 })();
